@@ -2,6 +2,7 @@ package learn.android.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,32 +31,44 @@ public class MainActivity extends AppCompatActivity {
     TextView buttonTextView;
     TextView userInputView;
 
+    UserInputDataHolder userInput;
+
     View.OnClickListener listener = v -> {
-        if(v instanceof Button) {
+        if (v instanceof Button) {
             CharSequence buttonText = ((Button) v).getText();
             buttonTextView.setText(buttonText);
-            UserInputDataHolder.USER_INPUT.append(buttonText);
-            userInputView.setText(UserInputDataHolder.USER_INPUT.toString());
+            userInput.getUserInput().append(buttonText);
+            userInputView.setText(userInput.getUserInput().toString());
         }
     };
+
+//    @Override
+//    public void onConfigurationChanged(Configuration newConfig) {
+//        super.onConfigurationChanged(newConfig);
+//        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+//            createHorizontalalLayout();
+//        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+//            createVerticalLayout();
+//        }
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        userInput = new UserInputDataHolder();
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putSerializable(USER_INPUT, UserInputDataHolder.USER_INPUT);
+        outState.putParcelable(USER_INPUT, userInput);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        UserInputDataHolder.USER_INPUT = (StringBuilder) savedInstanceState.getSerializable(USER_INPUT);
+        userInput = savedInstanceState.getParcelable(USER_INPUT);
     }
 
     @Override
