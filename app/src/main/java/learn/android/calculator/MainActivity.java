@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         userInput = new UserInputDataHolder();
         findElements();
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         userInput = savedInstanceState.getParcelable(USER_INPUT);
+        userInputView.setText(userInput.getUserInput());
     }
 
     @Override

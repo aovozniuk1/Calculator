@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="guideline_1_vertical_orientation_constraint">0.30</string>
+    <string name="guideline_2_vertical_orientation_constraint">0.25</string>
+    <string name="guideline_3_vertical_orientation_constraint">0.50</string>
+    <string name="guideline_4_vertical_orientation_constraint">0.75</string>
+    <string name="guideline_5_vertical_orientation_constraint">0.37</string>
+    <string name="guideline_6_vertical_orientation_constraint">0.44</string>
+    <string name="guideline_7_vertical_orientation_constraint">0.51</string>
+    <string name="guideline_8_vertical_orientation_constraint">0.58</string>
+    <string name="guideline_9_vertical_orientation_constraint">0.65</string>
+    <string name="guideline_10_vertical_orientation_constraint">0.80</string>
+    <string name="guideline_11_vertical_orientation_constraint">0.20</string>
 
-
+    <string name="guideline_1_horizontal_orientation_constraint">0.30</string>
+    <string name="guideline_2_horizontal_orientation_constraint">0.35</string>
+    <string name="guideline_3_horizontal_orientation_constraint">0.50</string>
+    <string name="guideline_4_horizontal_orientation_constraint">0.65</string>
+    <string name="guideline_5_horizontal_orientation_constraint">0.40</string>
+    <string name="guideline_6_horizontal_orientation_constraint">0.50</string>
+    <string name="guideline_7_horizontal_orientation_constraint">0.60</string>
+    <string name="guideline_8_horizontal_orientation_constraint">0.70</string>
+    <string name="guideline_9_horizontal_orientation_constraint">0.85</string>
+    <string name="guideline_10_horizontal_orientation_constraint">0.95</string>
+    <string name="guideline_11_horizontal_orientation_constraint">0.20</string>
 </resources>
