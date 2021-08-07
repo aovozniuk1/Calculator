@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/MyCalculator"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -89,6 +88,19 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="@string/guideline_11_vertical_orientation_constraint" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@string/guideline_12_vertical_orientation_constraint" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@string/guideline_13_vertical_orientation_constraint" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button1"
@@ -155,7 +167,6 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
-
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button7"
@@ -272,6 +283,18 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_options"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/guideline13"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline13"
+        app:layout_constraintTop_toTopOf="@+id/guideline12" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/dataView"

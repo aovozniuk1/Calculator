@@ -14,9 +14,14 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="MyCalculator" parent="Theme.Calculator">
+    <style name="MyCalculatorTheme1" parent="Theme.Calculator">
         <item name="android:textSize">50sp</item>
-        <item name="android:textColor">@android:color/holo_green_dark</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+    </style>
+
+    <style name="MyCalculatorTheme2" parent="Theme.Calculator">
+        <item name="android:textSize">100sp</item>
+        <item name="android:textColor">@color/purple_200</item>
     </style>
 
 </resources>

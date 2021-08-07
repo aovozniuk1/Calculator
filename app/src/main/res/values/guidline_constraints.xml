@@ -11,6 +11,8 @@
     <string name="guideline_9_vertical_orientation_constraint">0.65</string>
     <string name="guideline_10_vertical_orientation_constraint">0.80</string>
     <string name="guideline_11_vertical_orientation_constraint">0.20</string>
+    <string name="guideline_12_vertical_orientation_constraint">0.10</string>
+    <string name="guideline_13_vertical_orientation_constraint">0.15</string>
 
     <string name="guideline_1_horizontal_orientation_constraint">0.30</string>
     <string name="guideline_2_horizontal_orientation_constraint">0.35</string>

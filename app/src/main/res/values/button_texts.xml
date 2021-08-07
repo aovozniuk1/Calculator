@@ -16,5 +16,6 @@
     <string name="button_equals">=</string>
     <string name="button_divide">/</string>
     <string name="button_multiple">*</string>
+    <string name="button_options">Options</string>
 
 </resources>

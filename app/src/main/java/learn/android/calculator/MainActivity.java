@@ -2,6 +2,7 @@ package learn.android.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button optionsButton;
 
     String USER_INPUT = "user_input";
 
@@ -45,11 +48,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
         userInput = new UserInputDataHolder();
         findElements();
         setListeners();
+
+        optionsButton = findViewById(R.id.buttonOptions);
+        optionsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,OptionsActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
     }
 
     @Override
