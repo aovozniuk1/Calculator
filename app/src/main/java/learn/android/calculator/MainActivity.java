@@ -42,21 +42,14 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-//    @Override
-//    public void onConfigurationChanged(Configuration newConfig) {
-//        super.onConfigurationChanged(newConfig);
-//        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-//            createHorizontalalLayout();
-//        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
-//            createVerticalLayout();
-//        }
-//    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         userInput = new UserInputDataHolder();
+        findElements();
+        setListeners();
     }
 
     @Override
@@ -69,13 +62,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         userInput = savedInstanceState.getParcelable(USER_INPUT);
+        userInputView.setText(userInput.getUserInput());
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        findElements();
-        setListeners();
     }
 
     private void setListeners() {
